@@ -1,0 +1,99 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.AppView{
+  display: flex;
+  width: 100dvw;
+  height: 100dvh;
+}
+.navbar{
+  width: 30%;
+  height: 100%;
+  background-color: #fffdfd;
+}
+.navbar ul{
+  height: 85%;
+  list-style: none;
+  margin: 1rem;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1vw rgb(26, 25, 25); 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(233, 218, 218); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #00adb3; 
+}
+.navbar .addGroup{
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(22, 0, 139);
+  color: white;
+  font-size: xxx-large;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  padding: 0%;
+  bottom: 5vh;
+  left: 17vw;
+  cursor: pointer;
+}
+.body{
+  width: 80%;
+  height: 100%;
+  background-color: rgb(218, 229, 245);
+  overflow-y: auto;
+}
+.desktop-only {
+  display: block;
+}
+@media (max-width: 768px) {
+  .AppView {
+    display: block; 
+  }
+
+  /* Hide the sidebar navbar on mobile */
+  /* .navbar {
+    display: none;
+  } */
+
+  /* Body takes the full width */
+  .body {
+    width: 100%;
+    height: auto; 
+  }
+  .desktop-only {
+    display: none;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: auto; /* or a fixed height if desired */
+  }  
+  #hidden{
+    display: none;
+  }
+  .navbar .addGroup{
+    position: fixed;
+    left: 75vw;
+  }
+}
